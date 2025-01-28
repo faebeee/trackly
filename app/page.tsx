@@ -2,7 +2,7 @@ import { CreateEventButton } from "@/components/create-event-button";
 import { EventList } from "@/components/event-list";
 import { createUser, getUserByClerkId } from "@/lib/db/user-repository";
 import { UserProvider } from "@/components/user-provider";
-import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 
 export default async function Home() {

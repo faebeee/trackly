@@ -1,8 +1,6 @@
 import { getEvents } from "@/lib/db/event-repository";
 import { getCurrentUser } from "@/lib/get-current-user";
-import { Button } from "./ui/button";
 import { EventWidget } from "./event-widget";
-
 
 export const EventList = async () => {
     const user = await getCurrentUser()

@@ -1,9 +1,6 @@
-import { deleteEvent, getEvent, getEvents } from "@/lib/db/event-repository";
-import { getCurrentUser } from "@/lib/get-current-user";
-import { Button } from "./ui/button";
+import { getEvent } from "@/lib/db/event-repository";
 import { getEventEntries } from "@/lib/db/event-entry-repository";
 import { CreateEventEntryButton } from "./create-event-entry-button";
-import { DeleteWithConfirmationButton } from "./delete-with-confirmation-button";
 import { DeleteEventButton } from "./delete-event-button";
 
 const gradients = [
@@ -16,7 +13,6 @@ const gradients = [
 ];
 
 export const EventWidget = async ({eventId}: {eventId: number}) => {
-    const user = await getCurrentUser()
     const event = await getEvent(eventId)
     const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
     const entries = await getEventEntries(eventId)

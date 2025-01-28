@@ -11,6 +11,8 @@ export const createUser = async (clerkUserId: string) => {
         console.error(error)
         throw new Error(error.message);
     }
+
+    return data
 }
 
 export const getUserByClerkId = async (clerkUserId: string) => {
